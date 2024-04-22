@@ -1,7 +1,9 @@
 
 
 <div class="mt-2 mb-2 d-flex flex-column gap-2 w-80">
-  <input type="text" class="form-control" (input)="onUserInput($event)" />
+  <input type="text" class="form-control" 
+  (input)="onUserInput($event)" 
+  (keyup.enter)="addToList()"/>
   @if (!userInput) {
     <span class="text-danger">No user input!</span>
   } 

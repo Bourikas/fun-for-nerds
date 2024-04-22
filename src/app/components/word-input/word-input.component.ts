@@ -11,8 +11,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 })
 export class WordInputComponent {
   userInput: string = "";
-  oddsArray: string[] = ["anodd", "another"];
-  evensArray: string[] = ["aneven"];
+  oddsArray: string[] = [];
+  evensArray: string[] = [];
   oddsLength: number = 0;
   evensLength: number = 0;
   oddEvent: string = "";
@@ -44,10 +44,12 @@ export class WordInputComponent {
     if((this.userInput.length)%2 ===0){
       this.evensArray.push(this.userInput);
       console.log(this.evensArray);
+      this.userInput = '';
     }
     if((this.userInput.length)%2 !==0){
       this.oddsArray.push(this.userInput);
       console.log(this.oddsArray);
+      this.userInput = '';
     }
     
 
