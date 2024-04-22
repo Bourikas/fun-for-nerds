@@ -1,0 +1,23 @@
+
+
+<div class="mt-2 mb-2 d-flex flex-column gap-2 w-80">
+  <input type="text" class="form-control" (input)="onUserInput($event)" />
+  @if (!userInput) {
+    <span class="text-danger">No user input!</span>
+  } 
+  <span class="w-20"><button class="btn-primary  btn text" (click)="addToList()">Submit</button></span>
+
+    
+    <div class="w-100 ">
+        <tr>
+            <td class="w-50 p-3">{{oddEvent}}</td>
+            <td class="w-50 p-3">{{evenEvent}}</td>
+        </tr>
+        <tr>
+            <td class="w-50 p-3 bg-body ">{{oddsArray}}</td>
+            <td class="w-50 p-3">{{evensArray}}</td>
+        </tr>
+        
+    </div>
+  
+</div>
