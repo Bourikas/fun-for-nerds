@@ -5,7 +5,7 @@
   @if (!userInput) {
     <span class="text-danger">No user input!</span>
   } 
-  <span class="w-20"><button class="btn-primary  btn text" (click)="addToList()">Submit</button></span>
+  <span class="w-20"><button (click)="addToList()" class="btn-primary  btn text" >Submit</button></span>
 
     
     <div class="w-100 ">
@@ -14,8 +14,12 @@
             <td class="w-50 p-3">{{evenEvent}}</td>
         </tr>
         <tr>
-            <td class="w-50 p-3 bg-body ">{{oddsArray}}</td>
-            <td class="w-50 p-3">{{evensArray}}</td>
+          <td class="w-50 p-3"> <b> Odds List: </b> </td>
+          <td class="w-50 p-3"> <b> Evens List: </b> </td>
+      </tr>
+        <tr>
+            <td><li *ngFor="let odd of oddsArray">{{odd}}</li></td>
+            <td><li *ngFor="let even of evensArray">{{even}}</li></td>
         </tr>
         
     </div>
